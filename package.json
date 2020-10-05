@@ -1,0 +1,15 @@
+{
+  "name": "caesar-cipher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "maryna-buryna <maryna.buryna@gamil.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "gatsby develop -p 3000",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "optimist": "^0.6.1"
+  }
+}
