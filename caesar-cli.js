@@ -7,10 +7,17 @@ const { parseArgv } = require("./utils/parseArgv");
 const attrData = parseArgv();
 
 let writeStream; 
+let readStream; 
 
 // create writeStream if output file is valid
 if (attrData.output) {
-  writeStream = fs.createWriteStream(attrData.output);
+  writeStream = fs.createWriteStream(attrData.output, {
+    flags: 'a'
+  });
+}
+
+if (attrData.input) {
+  readStream = fs.createReadStream(filename);
 }
 
 const getCipherResults = (inputText) => {
