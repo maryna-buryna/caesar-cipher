@@ -10,8 +10,6 @@ const getActionCode = (argv) => {
   }
   if (action !== DECODE && action !== ENCODE) {
     throwArgvError(OPTION_NAME, `The value must be ${DECODE} or ${ENCODE}`);
-
-    process.exit(-1);
   }
 
   return  action === ENCODE ? 1 : -1; 
